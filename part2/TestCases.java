@@ -13,6 +13,8 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 import org.junit.Test;
 
+import jdk.jfr.Timestamp;
+
 public class TestCases
 {
    public static final double DELTA = 0.00001;
@@ -20,6 +22,14 @@ public class TestCases
    /*
     * This test is just to get you started.
     */
+
+   @Test
+   public void myTests(){
+      Point test = new Point(3.0, -1.0);
+      assertEquals(test.getX(), new Point(1.0, 3.0).rotate90().getX(), DELTA);
+      assertEquals(test.getY(), new Point(1.0, 3.0).rotate90().getY(), DELTA);
+   }
+
    @Test
    public void testGetX()
    {
