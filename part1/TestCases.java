@@ -10,8 +10,10 @@ import java.util.Map;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.fail;
 import org.junit.Test;
+
 
 public class TestCases
 {
@@ -115,7 +117,7 @@ public class TestCases
    @Test
    public void testBetterLoop3()
    {
-      assertTrue(!(BetterLoop.contains(new int[] {7, 5, 2, 4}, 10)));
+      assertFalse(BetterLoop.contains(new int[] {7, 5, 2, 4}, 10));
    }
 
    @Test
