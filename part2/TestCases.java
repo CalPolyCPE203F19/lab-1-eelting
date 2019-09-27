@@ -25,9 +25,20 @@ public class TestCases
 
    @Test
    public void myTests(){
-      Point test = new Point(3.0, -1.0);
+      Point test = new Point(-3.0, 1.0);
       assertEquals(test.getX(), new Point(1.0, 3.0).rotate90().getX(), DELTA);
       assertEquals(test.getY(), new Point(1.0, 3.0).rotate90().getY(), DELTA);
+      assertEquals(5.0, new Point(3.0, 4.0).getRadius(), DELTA);
+      assertEquals(5.0, new Point(3.0, 4.0).getRadius(), DELTA);
+      assertEquals(13.0, new Point(5.0, 12.0).getRadius(), DELTA);
+      assertEquals(3.14159265359 / 2, new Point(0.0, 1.0).getAngle(), DELTA);
+      assertEquals(- 3.14159265359 / 2, new Point(0.0, -1.0).getAngle(), DELTA);
+      assertEquals(-1, new Point(1.0, 3.0).rotate90().rotate90().getX(), DELTA);
+      assertEquals(-3, new Point(1.0, 3.0).rotate90().rotate90().getY(), DELTA);
+      assertEquals(3, new Point(1.0, 3.0).rotate90().rotate90().rotate90().getX(), DELTA);
+      assertEquals(-1, new Point(1.0, 3.0).rotate90().rotate90().rotate90().getY(), DELTA);
+      assertEquals(1, new Point(1.0, 3.0).rotate90().rotate90().rotate90().rotate90().getX(), DELTA);
+      assertEquals(3, new Point(1.0, 3.0).rotate90().rotate90().rotate90().rotate90().getY(), DELTA);
    }
 
    @Test

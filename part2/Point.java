@@ -28,13 +28,13 @@ public class Point
 
     public Point rotate90(){
         if (x > 0 && y > 0) {
-            return new Point(y, -x);
+            return new Point(-y, x);
         } else if (x > 0 && y < 0) {
-            return new Point(y, -x);
+            return new Point(-y, x);
         } else if (x < 0 && y < 0) {
-            return new Point(y, -x);
+            return new Point(-y, x);
         } else {
-            return new Point(y, -x);
+            return new Point(-y, x);
         }
     }
 
